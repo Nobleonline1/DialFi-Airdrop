@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DialFi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="difiimg1.jpg" alt="DiFi Token Logo" id="token-logo">
+                <h1>DialFi Airdrop</h1>
+            </div>
+            <div class="header-info">
+                <div class="total-supply">
+                    <p>DiFi Supply: <span id="total-supply-display">50,000,000</span> diFi</p>
+                </div>
+                <div class="user-balances">
+                    <p>My DiFi: <span id="user-difi-balance">0.00</span></p>
+                    <p>My Dpower: <span id="user-dpower-balance">0</span></p>
+                </div>
+            </div>
+            <button class="menu-button" id="menuButton">&#9776; Menu</button>
+        </header>
+
+        <nav id="sideMenu" class="side-menu">
+            <a href="javascript:void(0)" class="close-btn" id="closeMenuBtn">&times;</a>
+            <a href="#" id="tasksLink">Tasks</a>
+            <a href="whitepaper.html" id="whitepaperLink">White Paper</a>
+            <a href="#" id="contactLink">Contact</a>
+        </nav>
+
+        <main>
+            <section class="mining-section card">
+                <h2>Mine diFi</h2>
+                <p>You can mine 0.25 diFi every 12 hours.</p>
+                <p>Last Mined: <span id="last-mined-time">Never</span></p>
+                <p>Next Mine Available In: <span id="countdown">12:00:00</span></p>
+                <button id="mineButton" class="btn primary-btn" disabled>Mine 0.25 diFi</button>
+            </section>
+
+            <section class="referral-section card">
+                <h2>Referral Program</h2>
+                <p>Earn 2000 Dpower for each successful referral!</p>
+                <p>Your Referral Link: <span id="referral-link">https://dialfi.app/refer/yourid</span></p>
+                <button class="btn secondary-btn" onclick="copyToClipboard('referral-link')">Copy Link</button>
+            </section>
+
+            <section class="dpower-conversion-section card">
+                <h2>Dpower Conversion</h2>
+                <p>Convert 250 Dpower = 0.25 diFi</p>
+                <input type="number" id="dpower-to-convert" placeholder="Enter Dpower to convert" min="250" step="250">
+                <button id="convertDpowerBtn" class="btn primary-btn">Convert Dpower</button>
+                <p>You will get: <span id="converted-difi">0</span> diFi</p>
+            </section>
+
+            <section class="premium-purchase-section card">
+                <h2>Premium Dpower Purchase</h2>
+                <p>Get 10,000 Dpower for $5 worth of crypto.</p>
+                <input type="number" id="purchase-amount-usd" placeholder="Enter USD amount ($5 minimum)" min="5" step="5">
+                <button id="purchaseDpowerBtn" class="btn primary-btn">Purchase Dpower</button>
+                <div id="payment-details" style="display: none;">
+                    <p>Send <span id="crypto-amount"></span> to this address:</p>
+                    <p class="wallet-address" id="payment-address">Loading...</p>
+                    <button class="btn secondary-btn" onclick="copyToClipboard('payment-address')">Copy Address</button>
+                    <p class="small-text">Note: Payment will be confirmed within minutes. Do not refresh this page until confirmed.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="tasksModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Complete Tasks to Earn diFi</h2>
+            <div class="task-list">
+                <div class="task-item">
+                    <p>Follow us on X (Twitter)</p>
+                    <a href="https://twitter.com/yourdialfi" target="_blank" class="btn task-btn">Go to Page</a>
+                    <button class="btn primary-btn claim-task-btn" data-reward="0.25">Claim 0.25 diFi</button>
+                </div>
+                <div class="task-item">
+                    <p>Join our Telegram Community</p>
+                    <a href="https://t.me/yourdialfi" target="_blank" class="btn task-btn">Go to Page</a>
+                    <button class="btn primary-btn claim-task-btn" data-reward="0.25">Claim 0.25 diFi</button>
+                </div>
+                <div class="task-item">
+                    <p>Like our Facebook Page</p>
+                    <a href="https://facebook.com/yourdialfi" target="_blank" class="btn task-btn">Go to Page</a>
+                    <button class="btn primary-btn claim-task-btn" data-reward="0.25">Claim 0.25 diFi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Contact Support</h2>
+            <p>Click the button below to send a message to our support team.</p>
+            <a href="mailto:support@dialfi.app" class="btn primary-btn">Message Support</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

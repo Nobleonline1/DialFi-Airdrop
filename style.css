@@ -1,0 +1,373 @@
+/* style.css */:root {
+--primary-color: #6200EE; /* Purple /
+--secondary-color: #03DAC6; / Teal /
+--accent-color: #FFDE03; / Yellow */
+--text-color-primary: #FFFFFF;
+--text-color-secondary: #B0BEC5;
+--background-dark: #121212;
+--background-light: #1E1E1E;
+--card-background: #2C2C2C;
+--border-radius: 15px;
+--shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}body {
+font-family: 'Poppins', sans-serif;
+margin: 0;
+padding: 0;
+background-color: var(--background-dark);
+color: var(--text-color-primary);
+line-height: 1.6;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}.container {
+max-width: 960px;
+margin: 40px auto;
+padding: 20px;
+flex-grow: 1;
+}header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: var(--card-background);
+padding: 20px 30px;
+border-radius: var(--border-radius);
+box-shadow: var(--shadow);
+margin-bottom: 30px;
+flex-wrap: wrap;
+}.logo {
+display: flex;
+align-items: center;
+}.logo img {
+width: 50px;
+height: 50px;
+margin-right: 15px;
+border-radius: 50%;
+object-fit: cover;
+border: 2px solid var(--secondary-color);
+}.logo h1 {
+font-size: 1.7em;
+color: var(--secondary-color);
+margin: 0;
+}.total-supply p {
+font-size: 1.1em;
+font-weight: 600;
+color: var(--text-color-secondary);
+margin: 0;
+}.total-supply span {
+color: var(--accent-color);
+font-size: 1.2em;
+}
+
+.menu-button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #1976D2; /* Darker blue */
+}
+
+/* Side Menu */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: rgba(33, 150, 243, 0.95); /* Blue with transparency */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+}
+
+.side-menu a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    background-color: var(--primary-color);
+}
+
+.side-menu .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 3em;
+    margin-left: 50px;
+    color: white;
+}
+
+main {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+gap: 30px;
+}.card {
+background-color: var(--card-background);
+padding: 30px;
+border-radius: var(--border-radius);
+box-shadow: var(--shadow);
+}.card h2 {
+color: var(--secondary-color);
+margin-top: 0;
+font-size: 1.6em;
+margin-bottom: 20px;
+}.btn {
+display: inline-block;
+padding: 14px 24px;
+border: none;
+border-radius: var(--border-radius);
+cursor: pointer;
+font-size: 1.1em;
+font-weight: 600;
+text-align: center;
+text-decoration: none;
+transition: background-color 0.3s ease, transform 0.2s ease;
+margin-top: 15px;
+}
+
+.primary-btn {
+background-color: var(--primary-color);
+color: var(--text-color-primary);
+}
+
+.primary-btn:hover:not(:disabled) {
+background-color: #4A00B3; /* Darker purple */
+transform: translateY(-2px);
+
+}
+
+.secondary-btn {
+background-color: var(--secondary-color);
+color: var(--background-dark);
+}
+
+.secondary-btn:hover {
+background-color: #02A791; /* Darker teal */
+transform: translateY(-2px);
+}.btn:disabled {
+background-color: #666;
+color: #ccc;
+cursor: not-allowed;
+}input::placeholder {
+color: var(--text-color-secondary);
+opacity: 0.8;
+}input:-ms-input-placeholder {
+color: var(--text-color-secondary);
+}input::-ms-input-placeholder {
+color: var(--text-color-secondary);
+}input::-webkit-input-placeholder {
+color: var(--text-color-secondary);
+}input::-moz-placeholder {
+color: var(--text-color-secondary);
+}input {
+width: calc(100% - 30px);
+padding: 15px;
+margin: 12px 0;
+border: 1px solid #444;
+border-radius: 8px;
+font-size: 1em;
+background-color: var(--background-light);
+color: var(--text-color-primary);
+box-sizing: border-box;
+}.wallet-address {
+background-color: #333;
+padding: 15px;
+border-radius: 8px;
+word-break: break-all;
+font-family: 'monospace';
+font-size: 0.9em;
+margin-top: 15px;
+color: var(--text-color-secondary);
+}.small-text {
+font-size: 0.85em;
+color: var(--text-color-secondary);
+margin-top: 8px;
+}/* Mine Button Styling /
+#mineButton {
+width: 120px;
+height: 120px;
+border-radius: 50%;
+font-size: 1.2em;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 20px auto; / Center the button /
+padding: 0; / Remove default padding */
+border: none;
+background-color: var(--secondary-color);
+color: var(--background-dark);
+cursor: pointer;
+box-shadow: 0 4px 10px rgba(0, var(--secondary-color), 0, 0.4);
+transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}#mineButton:hover:not(:disabled) {
+transform: scale(1.05);
+box-shadow: 0 6px 12px rgba(0, var(--secondary-color), 0, 0.5);
+background-color: #02A791;
+}#mineButton:disabled {
+background-color: #555;
+color: #999;
+box-shadow: none;
+transform: none;
+}.mining-section {
+text-align: center;
+}#countdown, #last-mined-time {
+color: var(--accent-color);
+font-weight: bold;
+}/* Modals /
+.modal {
+display: none; / Hidden by default /
+position: fixed; / Stay in place /
+z-index: 1001; / Sit on top /
+left: 0;
+top: 0;
+width: 100%; / Full width /
+height: 100%; / Full height /
+overflow: auto; / Enable scroll if needed /
+background-color: rgba(0,0,0,0.7); / Black w/ opacity */
+justify-content: center;
+align-items: center;
+}.modal-content {
+background-color: var(--card-background);
+margin: auto;
+padding: 40px;
+border-radius: var(--border-radius);
+width: 90%; /* More responsive width */
+max-width: 600px;
+box-shadow: var(--shadow);
+position: relative;
+animation: fadeIn 0.3s ease-out;
+}.modal-content h2 {
+color: var(--secondary-color);
+margin-top: 0;
+margin-bottom: 25px;
+}.close-button {
+color: var(--text-color-secondary);
+position: absolute;
+top: 15px;
+right: 25px;
+font-size: 28px;
+font-weight: bold;
+cursor: pointer;
+opacity: 0.7;
+transition: opacity 0.3s ease;
+}.close-button:hover,
+.close-button:focus {
+color: var(--text-color-primary);
+text-decoration: none;
+opacity: 1;
+}.task-item {
+background-color: var(--background-light);
+border: 1px solid #333;
+padding: 20px;
+border-radius: 10px;
+margin-bottom: 20px;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-between;
+gap: 15px;
+}.task-item p {
+margin: 0;
+flex-grow: 1;
+color: var(--text-color-primary);
+}.task-btn {
+background-color: var(--accent-color);
+color: var(--background-dark);
+padding: 10px 20px;
+border-radius: 8px;
+font-size: 1em;
+text-decoration: none;
+transition: background-color 0.3s ease;
+}.task-btn:hover {
+background-color: #E6C300;
+}.claim-task-btn {
+background-color: var(--primary-color);
+color: var(--text-color-primary);
+padding: 10px 20px;
+border-radius: 8px;
+font-size: 1em;
+}.claim-task-btn:disabled {
+background-color: #555;
+color: #999;
+cursor: not-allowed;
+}/* Animations */
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(-30px); }
+to { opacity: 1; transform: translateY(0); }
+}/* Responsive Design */
+@media (max-width: 768px) {
+.container {
+margin-top: 30px;
+margin-bottom: 30px;
+padding: 15px;
+}header {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.total-supply {
+    margin-top: 10px;
+}
+
+.menu-button {
+    margin-top: 15px;
+}
+
+main {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.side-menu a {
+    font-size: 1.2em;
+    padding: 15px 25px;
+}
+
+.modal-content {
+    padding: 30px;
+}
+}@media (max-width: 480px) {
+.logo h1 {
+font-size: 1.5em;
+}.total-supply p {
+    font-size: 1em;
+}
+
+.total-supply span {
+    font-size: 1.1em;
+}
+
+.btn {
+    padding: 12px 20px;
+    font-size: 0.95em;
+}
+
+.card {
+    padding: 20px;
+}
+
+.card h2 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+
+#mineButton {
+    width: 100px;
+    height: 100px;
+    font-size: 1.1em;
+}
