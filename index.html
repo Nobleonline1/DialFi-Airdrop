@@ -9,21 +9,28 @@
 </head>
 <body>
     <div class="container">
-        <header>
+        <header style="background-image: url('divimage1.jpg');>
+        
+        <p>
+         <button class="menu-button" id="menuButton">&#9776; Menu</button>
+        
+        </p>
+
             <div class="logo">
                 <img src="difiimg1.jpg" alt="DiFi Token Logo" id="token-logo">
-                <h1>DialFi Airdrop</h1>
+                <h1 id="dialfiHeader">DialFi Airdrop</h1>
             </div>
+
             <div class="header-info">
                 <div class="total-supply">
-                    <p>DiFi Supply: <span id="total-supply-display">50,000,000</span> diFi</p>
+                    <p>DiFi Supply: <span id="total-supply-display">100,000,000</span> diFi</p>
                 </div>
                 <div class="user-balances">
                     <p>My DiFi: <span id="user-difi-balance">0.00</span></p>
                     <p>My Dpower: <span id="user-dpower-balance">0</span></p>
                 </div>
             </div>
-            <button class="menu-button" id="menuButton">&#9776; Menu</button>
+            
         </header>
 
         <nav id="sideMenu" class="side-menu">
@@ -34,7 +41,7 @@
         </nav>
 
         <main>
-            <section class="mining-section card">
+            <section class="mining-section card" >
                 <h2>Mine diFi</h2>
                 <p>You can mine 0.25 diFi every 12 hours.</p>
                 <p>Last Mined: <span id="last-mined-time">Never</span></p>

@@ -235,3 +235,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     updateAllBalances(); // Ensure balances are updated on page load
 });
+
+
+//Header display different text every 2 seconds
+    const messages = ["DialFi Airdrop", "Claim tokens!", "Dial a code!", "Send crypto!", "Receive!",
+     "Offline!", "Low fees!", "Don't miss!", "DialFi Airdrop"];
+    let currentIndex = 0;
+    const headerElement = document.getElementById("dialfiHeader");
+
+    function displayNextMessage() {
+        if (currentIndex < messages.length) {
+            headerElement.textContent = messages[currentIndex];
+            currentIndex++;
+        } else {
+            // Optional: Loop back to the beginning or clear the interval
+            currentIndex = 0; // To loop the messages
+            // clearInterval(messageInterval); // To stop after all messages are displayed once
+        }
+    }
+
+    // Call displayNextMessage every 2 seconds (2000 milliseconds)
+    const messageInterval = setInterval(displayNextMessage, 2000);

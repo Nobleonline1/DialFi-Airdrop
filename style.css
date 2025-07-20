@@ -81,7 +81,7 @@ font-size: 1.2em;
     z-index: 1000;
     top: 0;
     left: 0;
-    background-color: rgba(33, 150, 243, 0.95); /* Blue with transparency */
+    background-color: rgba(0, 0, 20, 0.95); /* navy Blue with transparency */
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -95,7 +95,7 @@ font-size: 1.2em;
     color: white;
     display: block;
     transition: 0.3s;
-}
+}side
 
 .side-menu a:hover {
     background-color: var(--primary-color);
@@ -371,3 +371,4 @@ font-size: 1.5em;
     height: 100px;
     font-size: 1.1em;
 }
+
